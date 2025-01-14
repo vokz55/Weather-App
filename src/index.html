@@ -1,23 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Прогноз погоды</title>
-</head>
-<body>
-    <div class="weather-app">
-        <h1>Прогноз погоды</h1>
-        <div class="search">
-            <input type="text" id="cityInput" placeholder="Введите город">
-            <button id="searchBtn">Найти</button>
-        </div>
-        <div class="weather-info">
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <ul class="nav-list">
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <img class="nav-icon" src="https://img.icons8.com/?size=100&id=xWIZQJTeNHmJ&format=png&color=000000" alt="">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <img class="nav-icon" src="https://img.icons8.com/?size=100&id=QApkqtngP0RV&format=png&color=000000" alt="">
+                    <span>Today</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <img class="nav-icon" src="https://img.icons8.com/?size=100&id=sErvJUYniF7R&format=png&color=000000" alt="">
+                    <span>Week</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <img class="nav-icon" src="https://img.icons8.com/?size=100&id=i3o6xZ1FIghJ&format=png&color=000000" alt="">
+                    <span>Go out</span>
+                </a>
+            </li>
+        </ul>
+        <form class="weather-app">
+          <div class="search">
+            <input
+              type="text"
+              id="cityInput"
+              placeholder="Find the city"
+              required
+            />
+            <button class="search-btn" type="submit" id="searchBtn">
+              Search
+            </button>
+          </div>
+          <div class="weather-info">
             <p id="cityName"></p>
             <p id="temperature"></p>
             <p id="description"></p>
+          </div>
+        </form>
+      </nav>
+    </header>
+
+    <main class="main">
+      <section class="current-weather">
+        <h2 class="city-name" id="name">Moscow</h2>
+        <span class="temperature" id="temperature-value">11°C</span>
+        <button class="add-city" id="add">ADD</button>
+      </section>
+      <!-- Saved Cities Section -->
+      <section class="saved-cities">
+        <h2 class="saved-cities-title">SAVED CITIES</h2>
+        <div class="cities-grid">
+          <div class="city-card">
+            <button class="city-btn">
+              <img
+                class="img_location"
+                src="https://img.icons8.com/?size=100&id=AjVqwV6CynXU&format=png&color=FFFFFF"
+                alt=""
+              />
+              <p class="city-name-btn">MOSCOW</p>
+            </button>
+            <button class="delete-btn">DELETE</button>
+          </div>
+          <div class="city-card">
+            <button class="city-btn">
+              <img
+                class="img_location"
+                src="https://img.icons8.com/?size=100&id=AjVqwV6CynXU&format=png&color=FFFFFF"
+                alt=""
+              />
+              <p class="city-name-btn">MOSCOW</p>
+            </button>
+            <button class="delete-btn">DELETE</button>
+          </div>
+          <div class="city-card">
+            <button class="city-btn">
+              <img
+                class="img_location"
+                src="https://img.icons8.com/?size=100&id=AjVqwV6CynXU&format=png&color=FFFFFF"
+                alt=""
+              />
+              <p class="city-name-btn">MOSCOW</p>
+            </button>
+            <button class="delete-btn">DELETE</button>
+          </div>
+          <div class="city-card">
+            <button class="city-btn">
+              <img
+                class="img_location"
+                src="https://img.icons8.com/?size=100&id=AjVqwV6CynXU&format=png&color=FFFFFF"
+                alt=""
+              />
+              <p class="city-name-btn">MOSCOW</p>
+            </button>
+            <button class="delete-btn">DELETE</button>
+          </div>
+          <div class="city-card">
+            <button class="city-btn">
+              <img
+                class="img_location"
+                src="https://img.icons8.com/?size=100&id=AjVqwV6CynXU&format=png&color=FFFFFF"
+                alt=""
+              />
+              <p class="city-name-btn">MOSCOW</p>
+            </button>
+            <button class="delete-btn">DELETE</button>
+          </div>
+          <div class="city-card">
+            <button class="city-btn">
+              <img
+                class="img_location"
+                src="https://img.icons8.com/?size=100&id=AjVqwV6CynXU&format=png&color=FFFFFF"
+                alt=""
+              />
+              <p class="city-name-btn">MOSCOW</p>
+            </button>
+            <button class="delete-btn">DELETE</button>
+          </div>
+          <div class="city-card">
+            <button class="city-btn">
+              <img
+                class="img_location"
+                src="https://img.icons8.com/?size=100&id=AjVqwV6CynXU&format=png&color=FFFFFF"
+                alt=""
+              />
+              <p class="city-name-btn">MOSCOW</p>
+            </button>
+            <button class="delete-btn">DELETE</button>
+          </div>
+          <div class="city-card">
+            <button class="city-btn">
+              <img
+                class="img_location"
+                src="https://img.icons8.com/?size=100&id=AjVqwV6CynXU&format=png&color=FFFFFF"
+                alt=""
+              />
+              <p class="city-name-btn">MOSCOW</p>
+            </button>
+            <button class="delete-btn">DELETE</button>
+          </div>
+          <div class="city-card">
+            <button class="city-btn">
+              <img
+                class="img_location"
+                src="https://img.icons8.com/?size=100&id=AjVqwV6CynXU&format=png&color=FFFFFF"
+                alt=""
+              />
+              <p class="city-name-btn">MOSCOW</p>
+            </button>
+            <button class="delete-btn">DELETE</button>
+          </div>
+          <div class="city-card">
+            <button class="city-btn">
+              <img
+                class="img_location"
+                src="https://img.icons8.com/?size=100&id=AjVqwV6CynXU&format=png&color=FFFFFF"
+                alt=""
+              />
+              <p class="city-name-btn">MOSCOW</p>
+            </button>
+            <button class="delete-btn">DELETE</button>
+          </div>
         </div>
-    </div>
+      </section>
+    </main>
+
     <script src="index.js"></script>
-</body>
+  </body>
 </html>
