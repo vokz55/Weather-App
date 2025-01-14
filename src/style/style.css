@@ -1,42 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Short+Stack&display=swap');
+/* General styles */
+
+
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: #f0f8ff;
+    background-color: #fff;
+    max-width: 1360px;
+    margin: 0 auto;
+    padding-top: 260px;
+    border-radius: 30px;
 }
 
-.weather-app {
-    text-align: center;
-    background: #ffffff;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-    width: 100%;
+/* Header styles */
+.header {
+    padding: 32px 36px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 45px;
+    transition: color 0.3s ease;
+}
+
+
+
+.nav-link {
+    position: relative;
+    text-decoration: none;
+    color: #000;
+    font-size: 30px;
+}
+
+.nav-icon {
+    position: absolute;
+    left: 20px;
+    bottom: 40px;
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: all 0.5s ease;
+    width: 50px;
+    pointer-events: none;  
+    user-select: none;    
+}
+
+
+.nav-icon:focus,
+.nav-icon:focus-visible {
+    outline: none;  /* Removes focus outline */
+}
+.nav-link:hover {
+    color: #adc178;
+}
+
+.nav-link:hover .nav-icon {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    gap: 13px;
 }
 
 .search input {
-    padding: 10px;
-    width: 70%;
-    margin-right: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    padding-left: 20px;
+    border: 1px solid #adc178;
+    border-radius: 15px;
+    height: 50px;
+    width: 270px;
+    font-size: 16px;
 }
 
-.search button {
-    padding: 10px;
-    border: none;
-    background: #007BFF;
-    color: white;
-    border-radius: 4px;
+.search input:focus{
+ outline: none;
+}
+
+.search input:focus-visible{
+    border: 2px solid #7f8f57;
+}
+
+.search-btn{
+    padding: 16px 33px;
+    border-radius: 15px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #adc178;
+    color: #fff;
+}
+
+.search-btn:hover{
+    background-color: #7f8f57;
+}
+
+.current-weather {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin: 40px 0;
+}
+
+.city-name {
+    font-size: 35px;
+    color: #000;
+}
+
+.temperature {
+    font-size: 24px;
+    color: #000;
+}
+
+.add-city {
+    background: transparent;
+    font-size: 20px;
+    padding: 8px 31px;
+    border: 1px solid #adc178;
+    color: #adc178;
+    border-radius: 20px;
+    cursor: pointer;
+
+}
+
+.add-city:hover{
+    background-color: #adc178;
+    color: #fff;
+}
+
+.saved-cities {
+    background: #adc178;
+    border-radius: 20px;
+    padding: 80px 117px;
+    letter-spacing: 10px;
+}
+
+.saved-cities-title {
+    text-align: center;
+    font-size: 37px;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.cities-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+.city-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.city-btn {
+    padding: 15px 20px;
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    
+}
+
+
+.city-name-btn{
+    font-size: 20px;
+    color: #fff;
+}
+
+.city-btn:hover{
+    border: 2px solid #7f8f57;
+}
+
+
+.delete-btn{
+    font-size: 12px;
+    opacity: 0.6;
     cursor: pointer;
 }
 
-.weather-info p {
-    margin: 10px 0;
-    font-size: 18px;
+.delete-btn:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+.img_location{
+    width: 50px;
 }
