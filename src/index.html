@@ -46,6 +46,7 @@
               Search
             </button>
           </div>
+          <div id="suggestions"></div>
           <div class="weather-info">
             <p id="cityName"></p>
             <p id="temperature"></p>
@@ -59,126 +60,32 @@
       <section class="current-weather">
         <h2 class="city-name" id="name">Moscow</h2>
         <span class="temperature" id="temperature-value">11°C</span>
+        <span class="description" id="description-value">Clouds</span>
         <button class="add-city" id="add">ADD</button>
       </section>
       <!-- Saved Cities Section -->
       <section class="saved-cities">
         <h2 class="saved-cities-title">SAVED CITIES</h2>
         <div class="cities-grid">
-          <div class="city-card">
-            <button class="city-btn">
-              <img
-                class="img_location"
-                src="https://img.icons8.com/?size=100&id=AjVqwV6CynXU&format=png&color=FFFFFF"
-                alt=""
-              />
-              <p class="city-name-btn">MOSCOW</p>
-            </button>
-            <button class="delete-btn">DELETE</button>
-          </div>
-          <div class="city-card">
-            <button class="city-btn">
-              <img
-                class="img_location"
-                src="https://img.icons8.com/?size=100&id=AjVqwV6CynXU&format=png&color=FFFFFF"
-                alt=""
-              />
-              <p class="city-name-btn">MOSCOW</p>
-            </button>
-            <button class="delete-btn">DELETE</button>
-          </div>
-          <div class="city-card">
-            <button class="city-btn">
-              <img
-                class="img_location"
-                src="https://img.icons8.com/?size=100&id=AjVqwV6CynXU&format=png&color=FFFFFF"
-                alt=""
-              />
-              <p class="city-name-btn">MOSCOW</p>
-            </button>
-            <button class="delete-btn">DELETE</button>
-          </div>
-          <div class="city-card">
-            <button class="city-btn">
-              <img
-                class="img_location"
-                src="https://img.icons8.com/?size=100&id=AjVqwV6CynXU&format=png&color=FFFFFF"
-                alt=""
-              />
-              <p class="city-name-btn">MOSCOW</p>
-            </button>
-            <button class="delete-btn">DELETE</button>
-          </div>
-          <div class="city-card">
-            <button class="city-btn">
-              <img
-                class="img_location"
-                src="https://img.icons8.com/?size=100&id=AjVqwV6CynXU&format=png&color=FFFFFF"
-                alt=""
-              />
-              <p class="city-name-btn">MOSCOW</p>
-            </button>
-            <button class="delete-btn">DELETE</button>
-          </div>
-          <div class="city-card">
-            <button class="city-btn">
-              <img
-                class="img_location"
-                src="https://img.icons8.com/?size=100&id=AjVqwV6CynXU&format=png&color=FFFFFF"
-                alt=""
-              />
-              <p class="city-name-btn">MOSCOW</p>
-            </button>
-            <button class="delete-btn">DELETE</button>
-          </div>
-          <div class="city-card">
-            <button class="city-btn">
-              <img
-                class="img_location"
-                src="https://img.icons8.com/?size=100&id=AjVqwV6CynXU&format=png&color=FFFFFF"
-                alt=""
-              />
-              <p class="city-name-btn">MOSCOW</p>
-            </button>
-            <button class="delete-btn">DELETE</button>
-          </div>
-          <div class="city-card">
-            <button class="city-btn">
-              <img
-                class="img_location"
-                src="https://img.icons8.com/?size=100&id=AjVqwV6CynXU&format=png&color=FFFFFF"
-                alt=""
-              />
-              <p class="city-name-btn">MOSCOW</p>
-            </button>
-            <button class="delete-btn">DELETE</button>
-          </div>
-          <div class="city-card">
-            <button class="city-btn">
-              <img
-                class="img_location"
-                src="https://img.icons8.com/?size=100&id=AjVqwV6CynXU&format=png&color=FFFFFF"
-                alt=""
-              />
-              <p class="city-name-btn">MOSCOW</p>
-            </button>
-            <button class="delete-btn">DELETE</button>
-          </div>
-          <div class="city-card">
-            <button class="city-btn">
-              <img
-                class="img_location"
-                src="https://img.icons8.com/?size=100&id=AjVqwV6CynXU&format=png&color=FFFFFF"
-                alt=""
-              />
-              <p class="city-name-btn">MOSCOW</p>
-            </button>
-            <button class="delete-btn">DELETE</button>
-          </div>
+
         </div>
       </section>
     </main>
 
-    <script src="index.js"></script>
+    <img class="gif">
+
+    <template id="saved-cities-template">
+      <div class="city-card">
+        <button class="city-btn">
+          <img
+            class="img_location"
+            src="https://img.icons8.com/?size=100&id=AjVqwV6CynXU&format=png&color=FFFFFF"
+            alt=""
+          />
+          <p class="city-name-btn">MOSCOW</p>
+        </button>
+        <button class="delete-btn">DELETE</button>
+      </div>
+    </template>
   </body>
 </html>
