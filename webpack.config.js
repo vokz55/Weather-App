@@ -31,23 +31,23 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: [MiniCssExtractPlugin.loader, {
-            loader: 'css-loader',
-            options: {
-              importLoaders: 1
-            }
-          },
-          'postcss-loader'
-        ]
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader'],
       },
     ]
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html'
+      template: './src/index.html',
+      filename: 'index.html',
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/today.html',
+      filename: 'today.html',
+    }),
+    new MiniCssExtractPlugin({
+      filename: 'style.css', // Общий файл стилей
     }),
     new CleanWebpackPlugin(),
-    new MiniCssExtractPlugin(),
-
   ]
 }
+

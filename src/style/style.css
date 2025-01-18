@@ -48,7 +48,6 @@ body {
   user-select: none;
 }
 
-
 .nav-link:hover {
   color: #adc178;
 }
@@ -109,7 +108,6 @@ body {
 
 .temperature {
   font-size: 24px;
-  color: #000;
 }
 
 .add-city {
@@ -189,4 +187,125 @@ body {
 
 .img_location {
   width: 50px;
+}
+
+/* Страница today */
+.main-today {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  margin: 11px 0;
+}
+
+.btn-list-time {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  gap: 20px;
+}
+
+.btn-time {
+  padding: 50px;
+  position: relative;
+  color: #000;
+  cursor: pointer;
+  font-size: 16px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.btn-time:hover {
+  transform: scale(1.2);
+  background-color: #7f8f57;
+}
+
+.btn-active {
+  background-color: #adc178;
+  color: #fff;
+  font-size: 16px;
+  position: relative; /* Добавлено для обеспечения правильного позиционирования псевдоэлементов */
+}
+
+.btn-active::before,
+.btn-active::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  box-shadow: 9px 16px 0 -5px #adc178;
+  width: 32px;
+  height: 46px;
+  transition: all 0.3s ease; /* Добавлено для плавного перехода */
+}
+
+.btn-active::before {
+  right: 0;
+  top: -38%;
+}
+
+.btn-active::after {
+  left: 247px;
+  bottom: -39%;
+  box-shadow: 9px -16px 0 -5px #adc178;
+  width: 33px;
+  height: 47px;
+}
+
+.current-weather-today {
+  background-color: #adc178;
+  color: #fff;
+  padding: 45px 77px;
+  border-radius: 20px;
+  position: relative;
+  text-align: center;
+}
+
+.today-icon {
+  box-sizing: border-box;
+  position: absolute;
+  right: -80px;
+  top: -57px;
+  width: 400px;
+}
+
+.today,
+.temperature {
+  display: block;
+}
+
+.today {
+  margin-bottom: 60px;
+  font-size: 100px;
+  letter-spacing: -9px;
+}
+
+.current-weather-today .temperature {
+  margin-left: 15px;
+  font-size: 100px;
+  font-weight: 400;
+}
+
+.time,
+.description {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.weather-phenomenon {
+  margin-top: 100px;
+}
+
+.weather-phenomenon-list {
+  display: flex;
+  gap: 110px;
+}
+
+.weather-phenomenon-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.weather-phenomenon-icon {
+  width: 60px;
 }

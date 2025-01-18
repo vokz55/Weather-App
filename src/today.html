@@ -20,7 +20,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="today.html" class="nav-link">
+            <a href="./today.html" class="nav-link">
               <img
                 class="nav-icon"
                 src="https://img.icons8.com/?size=100&id=QApkqtngP0RV&format=png&color=000000"
@@ -50,6 +50,10 @@
             </a>
           </li>
         </ul>
+        <div class="city-name-date">
+          <h2 class="city-name" id="name">Moscow</h2>
+          <span class="date" id="date-value">Feb 11, Friday</span>
+        </div>
         <form class="weather-app">
           <div class="search">
             <input
@@ -71,37 +75,61 @@
         </form>
       </nav>
     </header>
-
-    <main class="main">
-      <section class="current-weather">
-        <h2 class="city-name" id="name">Moscow</h2>
-        <span class="temperature" id="temperature-value">11°C</span>
-        <span class="description" id="description-value">Clouds</span>
-        <button class="add-city" id="add">ADD</button>
+    <main class="main-today">
+      <section class="btn-list-time">
+        <button class="btn-time btn-active">
+          Now
+          <span class="time" id="time-value">13:00 PM,</span>
+        </button>
+        <button class="btn-time">
+          Later
+          <span class="time" id="time-value">13:00 PM,</span>
+        </button>
+        <button class="btn-time">
+          Later
+          <span class="time" id="time-value">13:00 PM,</span>
+        </button>
       </section>
-      <!-- Saved Cities Section -->
-      <section class="saved-cities">
-        <h2 class="saved-cities-title">SAVED CITIES</h2>
-        <div class="cities-grid">
+      <section class="current-weather-today">
+        <img
+          class="today-icon"
+          src="https://img.icons8.com/stickers/500/sun.png"
+          alt=""
+        />
+        <h2 class="today">Today</h2>
+        <span class="temperature" id="temperature-value">11°C</span>
+        <span class="time" id="time-value">13:00 PM,</span>
+        <span class="description" id="description-value">Clouds</span>
 
+        <div class="weather-phenomenon">
+          <ul class="weather-phenomenon-list">
+            <li class="weather-phenomenon-item">
+              <img
+                class="weather-phenomenon-icon"
+                src="https://img.icons8.com/?size=100&id=QApkqtngP0RV&format=png&color=000000"
+                alt=""
+              />
+              <span>12% precipitation</span>
+            </li>
+            <li class="weather-phenomenon-item">
+              <img
+                class="weather-phenomenon-icon"
+                src="https://img.icons8.com/?size=100&id=H3KbH1J8KKGZ&format=png&color=000000"
+                alt=""
+              />
+              <span>92% humidity</span>
+            </li>
+            <li class="weather-phenomenon-item">
+              <img
+                class="weather-phenomenon-icon"
+                src="https://img.icons8.com/?size=100&id=XNMn9wVFp8dJ&format=png&color=000000"
+                alt=""
+              />
+              <span>5 km/h wind</span>
+            </li>
+          </ul>
         </div>
       </section>
     </main>
-
-    <img class="gif">
-
-    <template id="saved-cities-template">
-      <div class="city-card">
-        <button class="city-btn">
-          <img
-            class="img_location"
-            src="https://img.icons8.com/?size=100&id=AjVqwV6CynXU&format=png&color=FFFFFF"
-            alt=""
-          />
-          <p class="city-name-btn">MOSCOW</p>
-        </button>
-        <button class="delete-btn">DELETE</button>
-      </div>
-    </template>
   </body>
 </html>
