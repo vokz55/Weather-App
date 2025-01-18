@@ -4,7 +4,6 @@ export const favoritesObject = {
     // Получение списка избранных городов из localStorage
     getFavorites() {
         const favorites = localStorage.getItem(this.key);
-        console.log(favorites);
         return favorites ? JSON.parse(favorites) : [];
     },
 
@@ -30,9 +29,7 @@ export const favoritesObject = {
     }
 };
 
-
-
-export function createFavorite(city, deleteCity, deleteLocal) {
+export function createFavorite(city, deleteCity, deleteLocal, displayWeather, searchCity, fetchWeather) {
     const cardTemplate = document.querySelector('#saved-cities-template').content;
     const cardElement = cardTemplate.querySelector('.city-card').cloneNode(true);
     const cardButton = cardElement.querySelector('.city-btn');
@@ -47,6 +44,7 @@ export function createFavorite(city, deleteCity, deleteLocal) {
     });
 
     cardButton.addEventListener('click', () => {
+        fetchWeather(city, displayWeather, searchCity);
     });
 
     return cardElement;

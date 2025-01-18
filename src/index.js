@@ -21,12 +21,12 @@ const favoriteCities = favoritesObject.getFavorites();
 const deleteLocal = (city) => favoritesObject.removeFavorite(city);
 
 favoriteCities.forEach(element => {
-    const cardRendered = createFavorite(element, deleteCard, deleteLocal );
-    listCities.append(cardRendered);
+    const cardRendered = createFavorite(element, deleteCard, deleteLocal, displayWeather, searchCity, fetchWeather );
+    listCities.prepend(cardRendered);
 });
 
 function createNewCard(city, deleteCard, deleteLocal) {
-    const cardRendered = createFavorite(city, deleteCard, deleteLocal);
+    const cardRendered = createFavorite(city, deleteCard, deleteLocal, displayWeather, searchCity, fetchWeather );
     listCities.prepend(cardRendered);
 }
 
@@ -40,15 +40,32 @@ searchBtn.addEventListener('click', (evt) => {
 });
 
 function displayWeather(data) {
+    
     cityNameEl.textContent = `${data.name}`;
     temperatureEl.textContent = `${data.main.temp}°C`;
     descriptionEl.textContent = `${data.weather[0].main}`;
-
-    addBtn.addEventListener('click', () => {
-        favoritesObject.addFavorite(data.name);
-        createNewCard(data.name, deleteCard, deleteLocal);
-    });
+    checkAddBtn()
 };
+
+function checkAddBtn() {
+    const favoriteCities = favoritesObject.getFavorites();
+    if(favoriteCities.includes(cityNameEl.textContent)) {
+        addBtn.style.opacity = '0';
+        addBtn.disabled = true;
+    } else {
+        addBtn.style.opacity = '1';
+        addBtn.disabled = false;
+    };
+};
+
+addBtn.addEventListener('click', () => {
+    const favoriteCities = favoritesObject.getFavorites();
+    if(!favoriteCities.includes(cityNameEl.textContent)) {
+        favoritesObject.addFavorite(cityNameEl.textContent);
+        createNewCard(cityNameEl.textContent, deleteCard, deleteLocal);
+    }
+    checkAddBtn()
+});
 
 // Слушатель ввода города, с таймаутом, чтобы сократить запросы по апи при вводе
 let timeOut;
